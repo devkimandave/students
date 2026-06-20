@@ -1,22 +1,22 @@
 import { useState } from 'react'
-import { useNavigate, Link, useLocation } from 'react-router-dom' // react-router-dom मधून हे 3 import केले
+import { useNavigate, Link, useLocation } from 'react-router-dom' 
 
 function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   
-  // हे 2 react-router-dom चे hooks आहेत
-  const navigate = useNavigate() // Page बदलायला
-  const location = useLocation() // Current URL बघायला
+  
+  const navigate = useNavigate() 
+  const location = useLocation() 
 
   const handleSubmit = (e) => {
     e.preventDefault()
     
     if(email === 'admin@gmail.com' && password === '1234'){
-      // navigate() हा react-router-dom चा function आहे
-      navigate('/', { replace: true }) // Home ला पाठव आणि back button ने login ला येऊ देऊ नको
+      
+      navigate('/', { replace: true }) // 
     } else {
-      // Error आला तर login page वरच ठेव
+      
       navigate('/login')
     }
   }
@@ -43,8 +43,8 @@ function Login() {
         <button type="submit">Login</button>
         
         <p>
-          {/* Link हा पण react-router-dom चा component आहे */}
-          <Link to="/">Home ला जा</Link>
+          
+          <Link to="/">Home </Link>
         </p>
       </form>
     </div>
